@@ -18,3 +18,5 @@ before_install:
 before_script:
 - npm install
 after_success: npm run go
+after_failure:
+- docker-compose logs
