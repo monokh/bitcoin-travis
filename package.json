@@ -6,6 +6,7 @@
   "scripts": {
     "env:integration": "docker-compose -f docker-compose.yaml up -d --force-recreate --renew-anon-volumes",
     "env:integration:bootup": "sleep 10",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "test:bitcoin": "jest",
     "go": "run-s env:integration env:integration:bootup test:bitcoin"
   },
