@@ -6,8 +6,8 @@
   "scripts": {
     "env:integration": "docker-compose -f docker-compose.yaml up -d --force-recreate --renew-anon-volumes",
     "env:integration:bootup": "sleep 10",
-    "test": "jest",
-    "go": "run-s env:integration env:integration:bootup test"
+    "test:bitcoin": "jest",
+    "go": "run-s env:integration env:integration:bootup test:bitcoin"
   },
   "repository": {
     "type": "git",
