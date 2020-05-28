@@ -15,4 +15,6 @@ before_install:
 - curl -L https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
 - chmod +x docker-compose
 - sudo mv docker-compose /usr/local/bin
+before_script:
+- npm install
 after_success: npm run go
