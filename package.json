@@ -1,0 +1,29 @@
+{
+  "name": "bitcoin-travis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "env:integration": "docker-compose -f docker-compose.yaml up -d --force-recreate --renew-anon-volumes",
+    "env:integration:bootup": "sleep 10",
+    "test": "jest",
+    "go": "run-s env:integration env:integration:bootup test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monokh/bitcoin-travis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monokh/bitcoin-travis/issues"
+  },
+  "homepage": "https://github.com/monokh/bitcoin-travis#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
